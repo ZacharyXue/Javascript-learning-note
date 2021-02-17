@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 转换为数字
+		Number()可以将任意类型转换为数字；
+		而parseInt() parseFloat()只可以将字符串转换为数字。
+		数据类型		转换结果
+		Boolean 	true->1,false->0
+		Undefined 	NaN
+		String 		只包含数字的类型转换为十进制，
+					包含16进制“0x”格式的转换为对应十进制，
+					空字符串转换为0
+					其他转换为NaN
+		 -->
+		 <script type="text/javascript">
+			console.log("true 转换为数字为 "+Number(true))
+			console.log("false 转换为数字为 "+Number(false))
+			// 字符串转数字很重要，因为很多时候是用其他类型转换为字符串后
+			// 再用字符串转为数字
+		 	console.log("\"\" 转换为数字为 "+Number(""))
+			console.log("\"1\" 转换为数字为 "+Number("1"))
+			console.log("\".1\" 转换为数字为 "+Number(".1"))
+			console.log("\"a10\" 转换为数字为 "+Number("a10"))
+			// 注意！！！！
+			console.log("使用Number()将\"10px\" 转换为数字为 "+Number("10px"))
+			console.log("使用parseInt()将\"10px\" 转换为数字为 "+parseInt("10px"))
+			
+			console.log("使用Number()将\"10.5px5\" 转换为数字为 "+Number("10.5px5"))
+			console.log("使用parseInt()将\"10.5px5\" 转换为数字为 "+parseInt("10.5px5"))
+			console.log("使用parseFloat()将\"10.5px5\" 转换为数字为 "+parseFloat("10.5px5"))
+		 </script>
+	</body>
+</html>
