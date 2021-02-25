@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 转换为字符串：
+		String()可以转换任意类型到字符串类型；
+		toString()是大部分自带方法，转换为数字类型时，可以提供一个进制参数。
+		像undefined、null会转换为'undefined' 'null'
+		-->
+		<script type="text/javascript">
+			a = 10
+			//如果一个对象有toString方法的话，
+			// 使用String()时会调用toString()方法
+			console.log(String(a))		
+			console.log('二进制下为 '+a.toString(2))
+			console.log('五进制下为 '+a.toString(5))
+			console.log('八进制下为 '+a.toString(8))
+			console.log('十六进制下为 '+a.toString(16))
+			
+			e = 0x11
+			console.log(String(e))
+			console.log(e.toString())
+			
+			var b
+			console.log(String(b))
+			
+			c = null
+			console.log(String(c))
+			
+			d = NaN
+			console.log(String(d))
+			
+			o = new Object()
+			console.log(String(o))
+		</script>
+	</body>
+</html>
